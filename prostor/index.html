@@ -355,6 +355,42 @@
   .copy-ok{color:#bff0d4;font-size:13px;margin-left:12px;opacity:0;transition:opacity .3s}
   .copy-ok.show{opacity:1}
 
+  /* клуб-партнёр */
+  .club-pill{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;padding:7px 16px 7px 13px;border-radius:999px;text-align:left;
+    border:1px solid var(--line);background:rgba(224,189,85,.08);color:#e6efe9;font-size:13px;text-decoration:none;transition:.25s}
+  .club-pill i{width:8px;height:8px;border-radius:50%;flex:none;background:var(--gold);box-shadow:0 0 0 4px rgba(224,189,85,.18)}
+  .nw{white-space:nowrap}
+  .club-pill>span:last-child{color:var(--gold);transition:transform .25s}
+  .club-pill:hover{border-color:var(--gold);background:rgba(224,189,85,.14)}
+  .club-pill:hover>span:last-child{transform:translateX(3px)}
+  .club{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:40px}
+  @media(max-width:900px){.club{grid-template-columns:1fr}}
+  .letter{position:relative;overflow:hidden;border:1px solid rgba(224,189,85,.14);border-radius:22px;padding:44px 44px 36px;background:var(--bg2)}
+  .letter::before{content:"«";position:absolute;top:-40px;right:24px;font-family:'Cormorant Garamond',serif;font-size:230px;line-height:1;color:var(--gold);opacity:.1;pointer-events:none}
+  @media(max-width:540px){.letter{padding:30px 20px 26px}}
+  .letter .greet{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.4vw,32px);line-height:1.15;color:var(--gold2);margin:0 0 18px}
+  .letter p{color:#d4e6e2;font-size:16.5px;margin:0 0 14px}
+  .letter p.ask{border-left:3px solid var(--gold);padding:4px 0 4px 18px;color:var(--ink)}
+  .letter .sign{margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+  .letter .sign span,.letter .sign small{display:block;color:var(--muted);font-size:14px}
+  .letter .sign b{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:32px;line-height:1.2;color:var(--gold2)}
+  .letter .sign small{font-size:13px;letter-spacing:.04em}
+  .club-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;padding:30px;
+    background:linear-gradient(160deg,rgba(224,189,85,.1),rgba(11,58,53,.5))}
+  @media(max-width:540px){.club-card{padding:24px 18px}}
+  .club-card .cname{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.15;margin:10px 0 0}
+  .club-card .cname em{color:var(--gold2)}
+  .club-card .site{display:flex;align-items:center;flex-wrap:wrap;gap:12px 16px;margin-top:20px}
+  .club-card .site .url{color:var(--muted);font-size:14px;text-decoration:none;border-bottom:1px solid rgba(158,193,188,.35)}
+  .club-card .site .url:hover{color:var(--ink)}
+  .club-steps{list-style:none;counter-reset:s;padding:0;margin:28px 0 0;display:grid;gap:16px}
+  .club-steps li{counter-increment:s;position:relative;padding-left:44px;color:#d4e6e2;font-size:14.5px}
+  .club-steps li::before{content:counter(s);position:absolute;left:0;top:-3px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+    border:1px solid var(--line);background:var(--bg);color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:17px}
+  .club-steps b{color:var(--ink);font-weight:600}
+  .club-card .ways{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:28px}
+  .club-card .wl{flex-basis:100%;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
   /* лайтбокс */
   .lb{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;flex-direction:column;
     background:rgba(4,22,20,.92);backdrop-filter:blur(6px);padding:60px 16px 24px}
@@ -389,6 +425,7 @@
       <a class="lnk" href="#projects">Проекты</a>
       <a class="lnk" href="#hedges">Рекомендации</a>
       <a class="lnk" href="#price">Прайс</a>
+      <a class="lnk" href="#club">Клуб</a>
       <a class="lnk" href="#contacts">Контакты</a>
     </div>
     <a class="btn sm" href="#contacts">Связаться</a>
@@ -397,6 +434,7 @@
 
 <header class="hero" id="top">
   <div class="wrap inner">
+    <a class="club-pill" href="#club"><i></i><span>Партнёрство с <span class="nw">VIP бизнес-клубом</span></span><span>→</span></a>
     <div class="hero-badge"><img src="assets/img/ecobos-logo.jpg" alt="Консорциум «ЭкоБОС»"></div>
     <div class="kicker">ООО «ПРО СТОР» · исполнительный орган Консорциума «ЭкоБОС»</div>
     <h1><em>Озеленение</em> автомобильных дорог</h1>
@@ -734,6 +772,46 @@
 
 <div class="wrap"><div class="divline"></div></div>
 
+<section id="club">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Партнёрство</div>
+      <h2>Приглашаем к сотрудничеству</h2>
+      <p>Экономический дипломатический <span class="nw">VIP бизнес-клуб</span> продвигает проект вместе с ООО «ПРО СТОР» и Консорциумом «ЭкоБОС».</p>
+    </div>
+    <div class="club">
+      <article class="letter">
+        <p class="greet">Уважаемые друзья!</p>
+        <p>С радостью сообщаю: наш экономический дипломатический <span class="nw">VIP бизнес-клуб</span> начал сотрудничество с ООО «ПРО СТОР» и Консорциумом «ЭкоБОС». Вместе мы продвигаем проект «Экология, озеленение, благоустройство, ландшафтный дизайн».</p>
+        <p>Приглашаю всех присоединиться. Мы открыты к сотрудничеству и готовы рассмотреть любые предложения. Заходите, знакомьтесь с проектом и делитесь обратной связью — наши специалисты обязательно ответят.</p>
+        <p class="ask">Обращаясь к нам, пожалуйста, представьтесь и укажите, что вы из нашего экономического дипломатического <span class="nw">VIP бизнес-клуба</span>. Так будут учтены интересы и клуба, и каждого из вас.</p>
+        <p>Спасибо!</p>
+        <div class="sign"><span>С уважением,</span><b>ваш Александер</b><small>Экономический дипломатический <span class="nw">VIP бизнес-клуб</span></small></div>
+      </article>
+      <aside class="club-card">
+        <div class="kicker">Партнёр проекта</div>
+        <div class="cname">Экономический дипломатический <em class="nw">VIP бизнес-клуб</em></div>
+        <div class="site">
+          <a class="btn sm" href="https://club.ashs.pro" target="_blank" rel="noopener">Перейти в клуб</a>
+          <a class="url" href="https://club.ashs.pro" target="_blank" rel="noopener">club.ashs.pro</a>
+        </div>
+        <ol class="club-steps">
+          <li><b>Ознакомьтесь</b> с проектом, примерами работ и прайсом.</li>
+          <li><b>Напишите</b> нашим специалистам в WhatsApp или на e-mail.</li>
+          <li><b>Представьтесь</b> и укажите, что вы из клуба: мы учтём интересы клуба и ваши.</li>
+        </ol>
+        <div class="ways">
+          <div class="wl">Написать от имени клуба</div>
+          <a class="btn ghost sm" id="clubWa" href="https://wa.me/79853308788" target="_blank" rel="noopener">WhatsApp от клуба</a>
+          <a class="btn ghost sm" id="clubMail" href="mailto:oleg-khmelev@mail.ru">E-mail</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
 <section id="contacts">
   <div class="wrap">
     <div class="sec-head">
@@ -793,6 +871,7 @@
     <div><div class="brandrow"><span class="badge" style="width:30px;height:30px;border-radius:8px"><img src="assets/img/ecobos-logo.jpg" alt=""></span><div class="logo" style="font-size:20px"><b>ПРО</b> СТОР</div></div><div style="margin-top:8px">Исполнительный орган Консорциума «Экология Озеленение Благоустройство Строительство»</div></div>
     <div>ИНН 9713017571 · ОГРН 1247700481148
       <div class="docs"><a href="docs/ecobos-presentation.pdf" target="_blank">Презентация (PDF)</a> · <a href="docs/prostor-price.xlsx" download>Прайс-лист (XLSX)</a></div>
+      <div class="docs">Партнёр — VIP бизнес-клуб: <a href="https://club.ashs.pro" target="_blank" rel="noopener">club.ashs.pro</a></div>
     </div>
   </div>
 </footer>
@@ -930,6 +1009,11 @@ function updateReq(){
 document.getElementById('reqClear').addEventListener('click',function(){picked={};renderPrice();updateReq();});
 
 renderPrice();
+
+/* ── обращение от участника клуба: имя дописывают сами ── */
+var CLUB_MSG='Здравствуйте! Я из экономического дипломатического VIP бизнес-клуба (club.ashs.pro). Меня зовут ';
+document.getElementById('clubWa').href='https://wa.me/'+WA_PHONE+'?text='+encodeURIComponent(CLUB_MSG);
+document.getElementById('clubMail').href='mailto:'+MAIL+'?subject='+encodeURIComponent('Обращение от участника VIP бизнес-клуба')+'&body='+encodeURIComponent(CLUB_MSG);
 
 /* ── реквизиты ── */
 document.getElementById('copyReqs').addEventListener('click',function(){
