@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ООО «ПРО СТОР» · Консорциум «ЭкоБОС» — озеленение автомобильных дорог</title>
+<meta name="description" content="ООО «ПРО СТОР» — исполнительный орган Консорциума «ЭкоБОС» (Экология Озеленение Благоустройство Строительство). Озеленение автомобильных дорог, проектирование придорожных насаждений, живые изгороди, посадочный материал: прайс-лист на 1 059 позиций.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b352f; --bg2:#0e433d; --ink:#eef4f2; --muted:#9ec1bc;
+    --gold:#e0bd55; --gold2:#f1d889; --line:rgba(224,189,85,.28);
+    --card:rgba(255,255,255,.05); --panel:#0e4a44; --panel2:#0b3a35;
+    --warn:#f3c79a; --paper:#f6f3ea;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{margin:0;background-color:#0a302b;
+    background-image:radial-gradient(ellipse 92% 55% at 50% -8%,#15544d,transparent 62%),linear-gradient(180deg,#0e413b,#0a2e2a);
+    background-attachment:fixed;color:var(--ink);
+    font-family:Manrope,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+  a{color:inherit}
+  img{max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  @media(max-width:540px){.wrap{padding:0 16px}}
+  .gold{color:var(--gold)}
+  .kicker{letter-spacing:.34em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:600}
+  .btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+    color:#2c2008;padding:16px 34px;border-radius:999px;
+    background:linear-gradient(135deg,#f8e6a3 0%,#eccd74 34%,#d6ab48 64%,#bb892f 100%);
+    box-shadow:0 10px 30px rgba(196,146,42,.36),0 2px 6px rgba(0,0,0,.25),
+      inset 0 1px 0 rgba(255,255,255,.65),inset 0 -3px 9px rgba(120,80,15,.4),inset 0 0 0 1px rgba(255,236,180,.35);
+    transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s,filter .28s}
+  /* верхний глянец */
+  .btn::after{content:"";position:absolute;left:2px;right:2px;top:2px;height:46%;z-index:1;pointer-events:none;
+    border-radius:999px 999px 60px 60px/999px 999px 24px 24px;
+    background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0))}
+  /* скользящий блик (glide) */
+  .btn::before{content:"";position:absolute;top:-20%;left:-160%;width:70%;height:140%;z-index:2;pointer-events:none;
+    transform:skewX(-22deg);will-change:left;
+    background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%);
+    transition:left .7s cubic-bezier(.2,.7,.2,1);
+    animation:btnGlide 5.5s cubic-bezier(.2,.7,.2,1) 1.4s infinite}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.05) saturate(1.05);
+    box-shadow:0 18px 48px rgba(196,146,42,.52),0 3px 8px rgba(0,0,0,.3),
+      inset 0 1px 0 rgba(255,255,255,.75),inset 0 -3px 9px rgba(120,80,15,.45),inset 0 0 0 1px rgba(255,240,195,.6)}
+  .btn:hover::before{left:170%;animation:none}
+  .btn:active{transform:translateY(0) scale(.99)}
+  .btn:focus-visible{outline:2px solid #fff3cf;outline-offset:3px}
+  @keyframes btnGlide{0%{left:-160%}14%{left:170%}100%{left:170%}}
+
+  /* призрачная (вторичная) — статусный золотой контур, блик золотом */
+  .btn.ghost{color:var(--gold);background:linear-gradient(135deg,rgba(224,189,85,.1),rgba(224,189,85,.03));
+    text-shadow:0 1px 10px rgba(224,189,85,.3);
+    box-shadow:inset 0 0 0 1px rgba(224,189,85,.55),inset 0 1px 0 rgba(255,255,255,.12),0 8px 24px rgba(0,0,0,.28)}
+  .btn.ghost::after{display:none}
+  .btn.ghost::before{background:linear-gradient(115deg,transparent 0%,rgba(241,216,137,.5) 50%,transparent 100%);animation-delay:2.6s}
+  .btn.ghost:hover{filter:none;transform:translateY(-2px);background:linear-gradient(135deg,rgba(224,189,85,.18),rgba(224,189,85,.06));
+    box-shadow:inset 0 0 0 1px rgba(224,189,85,.9),inset 0 1px 0 rgba(255,255,255,.18),0 12px 32px rgba(224,189,85,.22)}
+  .btn.sm{padding:11px 22px;font-size:12px;letter-spacing:.05em}
+
+  /* top bar */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:40;backdrop-filter:blur(10px);
+    background:rgba(9,46,42,.72);border-bottom:1px solid rgba(224,189,85,.12)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+  .brandrow{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+  .badge{width:40px;height:40px;border-radius:11px;overflow:hidden;flex:none;background:#fff;
+    box-shadow:0 0 0 1px rgba(224,189,85,.55),0 4px 14px rgba(0,0,0,.3)}
+  .badge img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:23px;letter-spacing:.16em;line-height:1.05;white-space:nowrap}
+  .logo b{color:var(--gold);font-weight:600}
+  .logo small{display:block;font-family:Manrope,sans-serif;font-size:9.5px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;margin-top:3px}
+  .nav a.lnk{font-size:14px;color:var(--muted);margin:0 11px;text-decoration:none;white-space:nowrap}
+  .nav a.lnk:hover{color:var(--ink)}
+  .nav .btn{flex:none;white-space:nowrap}
+  @media(max-width:1060px){.nav .links{display:none}}
+  @media(max-width:540px){.nav .btn{padding:10px 14px;font-size:11px;letter-spacing:.03em}}
+  @media(max-width:380px){.nav .logo small{display:none}}
+  @media(prefers-reduced-motion:reduce){.btn::before{animation:none}html{scroll-behavior:auto}}
+
+  /* hero */
+  .hero{position:relative;padding:150px 0 70px;text-align:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(ellipse 60% 50% at 50% 0%,rgba(224,189,85,.16),transparent 70%);pointer-events:none}
+  .hero::after{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:radial-gradient(circle at 50% 50%,rgba(224,189,85,.1) 1px,transparent 1px);
+    background-size:34px 34px;mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000,transparent 75%)}
+  .hero .inner{position:relative;z-index:2}
+  .hero-badge{width:108px;height:108px;border-radius:28px;margin:0 auto 22px;background:#fff;overflow:hidden;
+    box-shadow:0 0 0 1px rgba(224,189,85,.6),0 0 0 7px rgba(224,189,85,.1),0 14px 40px rgba(0,0,0,.35)}
+  .hero-badge img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+  @media(max-width:540px){.hero-badge{width:86px;height:86px;border-radius:22px}}
+  .hero .kicker{font-size:15px;letter-spacing:.28em}
+  @media(max-width:540px){.hero .kicker{font-size:12px;letter-spacing:.18em}}
+  .hero h1{font-size:clamp(44px,8vw,92px);line-height:1.02;margin:18px auto 0;max-width:13ch;font-weight:500}
+  .hero h1 em{font-style:italic;color:var(--gold2)}
+  .lead{max-width:660px;margin:24px auto 0;color:#cfe2de;font-size:18px}
+  @media(max-width:540px){.lead{font-size:16px}}
+  .hero .cta{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .seal{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;
+    padding:7px 16px 7px 8px;font-size:13px;color:var(--muted);margin-top:30px;text-align:left}
+  .seal i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;
+    background:radial-gradient(circle at 35% 30%,var(--gold2),#8a6c20);color:#1a1407;font-style:normal;font-weight:700;font-family:serif;font-size:12px}
+
+  /* лента питомника + цифры */
+  .strip{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .strip img{display:block;width:100%;height:auto;min-height:90px;object-fit:cover}
+  .strip-cap{text-align:center;color:var(--muted);font-size:13px;letter-spacing:.06em;margin-top:12px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{border-top:1px solid var(--line);padding-top:16px}
+  .stat b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,4.4vw,46px);line-height:1;color:var(--gold2)}
+  .stat span{display:block;color:var(--muted);font-size:14px;margin-top:8px}
+
+  section{padding:84px 0;position:relative}
+  @media(max-width:540px){section{padding:64px 0}}
+  .sec-head{max-width:720px}
+  .sec-head h2{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:12px 0 0}
+  .sec-head p{color:var(--muted);font-size:17px;margin-top:14px}
+  .center{margin:0 auto;text-align:center}
+  .divline{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+  .sub{font-size:clamp(24px,3.4vw,32px);margin:64px 0 0;line-height:1.15}
+  .sub+.subp{color:var(--muted);font-size:15.5px;margin:10px 0 0;max-width:760px}
+  p.body{color:#cfe2de;font-size:16px;margin:16px 0 0}
+
+  /* cards */
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+  @media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.grid4{grid-template-columns:1fr}}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  @media(max-width:900px){.grid3{grid-template-columns:1fr}}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr}}
+  .pcard{background:linear-gradient(180deg,var(--card),rgba(255,255,255,.015));border:1px solid rgba(224,189,85,.1);
+    border-radius:16px;padding:26px 22px;transition:.25s}
+  .pcard:hover{border-color:var(--line);transform:translateY(-3px)}
+  .pcard .n{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold);opacity:.6}
+  .pcard h3{font-size:23px;margin:10px 0 8px;line-height:1.15}
+  .pcard p{color:var(--muted);font-size:14.5px;margin:0}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px}
+  @media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr);row-gap:34px}}
+  @media(max-width:600px){.steps{grid-template-columns:1fr}}
+  .steps.two{grid-template-columns:1fr 1fr}
+  @media(max-width:600px){.steps.two{grid-template-columns:1fr}}
+  .step{position:relative;padding:28px 26px;border:1px solid rgba(255,255,255,.06);border-radius:16px;background:var(--bg2)}
+  .step .b{position:absolute;top:-16px;left:24px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+    background:var(--bg);border:1px solid var(--line);color:var(--gold);font-family:serif;font-size:20px}
+  .step h3{margin:12px 0 8px;font-size:22px;line-height:1.15}
+  .step p{color:var(--muted);font-size:14.5px;margin:0}
+
+  /* итог этапов */
+  .result{margin-top:30px;border:1px solid var(--line);border-radius:22px;padding:8px 30px;
+    background:linear-gradient(160deg,rgba(224,189,85,.08),rgba(11,58,53,.5));display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+  @media(max-width:820px){.result{grid-template-columns:1fr;padding:6px 22px}}
+  .result div{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:13px;color:#d4e6e2;font-size:15px}
+  .result div:nth-last-child(-n+2){border-bottom:0}
+  @media(max-width:820px){.result div:nth-last-child(2){border-bottom:1px solid rgba(255,255,255,.06)}}
+  .result b{color:var(--gold);font-weight:600}
+
+  /* акцентная карточка с цифрой */
+  .disc{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  @media(max-width:900px){.disc{grid-template-columns:1fr;gap:28px}}
+  .disc .sec-head{max-width:none}
+  .ex{border:1px solid var(--line);border-radius:22px;padding:34px 28px;text-align:center;
+    background:linear-gradient(160deg,rgba(224,189,85,.1),rgba(11,58,53,.5))}
+  .ex .lbl{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .ex .now{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6vw,64px);line-height:1;color:var(--gold2);margin:16px 0 8px}
+  .ex .cap{color:var(--muted);font-size:14px}
+  .split{display:flex;height:10px;border-radius:999px;overflow:hidden;margin:22px 0 8px;background:rgba(255,255,255,.06)}
+  .split i{display:block;height:100%}
+  .split .a{width:70%;background:linear-gradient(90deg,#f1d889,#d6ab48)}
+  .legend{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);gap:10px}
+  .fine{color:var(--muted);font-size:14.5px;margin-top:22px;max-width:760px}
+  .org{text-align:left;display:flex;flex-direction:column;gap:12px}
+  .org .lbl{margin-bottom:6px}
+  .org .node{position:relative;border:1px solid rgba(224,189,85,.2);border-radius:14px;padding:14px 16px;background:rgba(11,58,53,.55)}
+  .org .node+.node::before{content:"";position:absolute;left:50%;top:-13px;width:1px;height:12px;background:var(--line)}
+  .org .node b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px;line-height:1.2}
+  .org .node span{display:block;color:var(--muted);font-size:13.5px;margin-top:3px}
+  .org .node.on{border-color:var(--gold);background:rgba(224,189,85,.12)}
+  .org .node.on b{color:var(--gold2)}
+
+  /* фото */
+  .ph{position:relative;margin:0;border-radius:14px;overflow:hidden;background:var(--panel2);border:1px solid rgba(224,189,85,.14);cursor:zoom-in}
+  .ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .ph:hover img{transform:scale(1.04)}
+  .ph:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .case{display:flex;flex-direction:column}
+  .case .pics{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+  .case .pics.one{grid-template-columns:1fr}
+  .case .pics .ph{aspect-ratio:4/3}
+  .case .pics.one .ph{aspect-ratio:16/9.6}
+  .case figcaption,.tile figcaption{display:flex;gap:12px;align-items:baseline;margin-top:14px;color:#d4e6e2;font-size:15px;line-height:1.45}
+  .case figcaption .n{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:20px;flex:none}
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  @media(max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.tiles{grid-template-columns:1fr}}
+  .tile{margin:0}
+  .tile .ph{aspect-ratio:3/2}
+  .tile figcaption{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+  .tile figcaption b{color:var(--ink);font-weight:500}
+  .row5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:40px}
+  .row5 .ph{aspect-ratio:1/1}
+  @media(max-width:820px){.row5{grid-template-columns:repeat(3,1fr)}.row5 .ph:nth-child(n+4){aspect-ratio:3/2}.row5 .ph:nth-child(4){grid-column:span 2}}
+  @media(max-width:480px){.row5{grid-template-columns:1fr 1fr}.row5 .ph:nth-child(4){grid-column:auto}.row5 .ph:nth-child(5){grid-column:span 2}}
+  .paper{background:var(--paper);border-radius:16px;padding:18px;border:1px solid var(--line)}
+  .paper img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+
+  /* теги и заметки */
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .tag{display:inline-block;background:var(--panel);border:1px solid rgba(224,189,85,.22);color:#cfe2de;border-radius:999px;padding:6px 14px;font-size:13.5px}
+  .notes{display:grid;gap:12px;margin-top:26px}
+  .note{position:relative;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;
+    background:rgba(224,189,85,.07);padding:14px 18px 14px 46px;font-size:15px;color:#e6efe9}
+  .note::before{content:"✦";position:absolute;left:18px;top:13px;color:var(--gold)}
+  .note.warn{border-color:rgba(243,199,154,.4);border-left-color:var(--warn);background:rgba(243,160,110,.08)}
+  .note.warn::before{content:"!";font-weight:700;color:var(--warn);left:21px}
+  .note b{color:var(--gold2);font-weight:600}
+  .note.warn b{color:var(--warn)}
+
+  /* опыт */
+  .xp{border:1px solid rgba(224,189,85,.12);border-radius:20px;padding:28px;background:linear-gradient(180deg,var(--card),rgba(255,255,255,.015))}
+  @media(max-width:540px){.xp{padding:22px 18px}}
+  .xp h3{font-size:26px;margin:8px 0 10px;line-height:1.15}
+  .xp p,.xp li{color:#cfe2de;font-size:15px}
+  .xp ol{padding-left:20px;margin:10px 0 0}
+  .xp li{margin:6px 0}
+  .xp li::marker{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:18px}
+  .xp .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .xp .pics .ph{aspect-ratio:4/3}
+  .xp .pics .wide{grid-column:span 2;aspect-ratio:2.1/1}
+
+  /* метрики изгороди */
+  .metrics{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .metric{flex:1 1 150px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:rgba(224,189,85,.06)}
+  .metric b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;line-height:1;color:var(--gold2)}
+  .metric span{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+  ul.dash{list-style:none;padding:0;margin:18px 0 0}
+  ul.dash li{position:relative;padding:8px 0 8px 26px;color:#d4e6e2;font-size:15.5px}
+  ul.dash li::before{content:"✦";position:absolute;left:2px;top:8px;color:var(--gold)}
+
+  /* растения */
+  .plant{margin:0;border:1px solid rgba(224,189,85,.12);border-radius:16px;overflow:hidden;background:var(--bg2);display:flex;flex-direction:column}
+  .plant .ph{border:0;border-radius:0;aspect-ratio:4/3}
+  .plant .ph.tall{aspect-ratio:1/1}
+  .plant figcaption{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .plant .nm{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2}
+  .plant .ht{color:var(--gold);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .plant .to-price{margin-top:auto;padding:10px 0 0;border:0;background:0;font:inherit;font-size:13px;color:var(--muted);cursor:pointer;text-align:left}
+  .plant .to-price:hover{color:var(--gold2)}
+  .plant .to-price[hidden]{display:none}
+  @media(max-width:540px){
+    #plants .grid4{grid-template-columns:1fr 1fr;gap:12px}
+    .plant figcaption{padding:12px 12px 14px}.plant .nm{font-size:18px}.plant .ht{font-size:11.5px;letter-spacing:.04em}
+  }
+
+  /* облик ограждений */
+  .ctx .pcard h3{margin-top:4px}
+  .ctx-strip{margin-top:40px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .ctx-strip img{display:block;width:100%;height:auto;min-height:120px;object-fit:cover}
+
+  /* прайс */
+  .price-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .price-top .dl{display:flex;gap:12px;flex-wrap:wrap}
+  .pbox{margin-top:34px;border:1px solid var(--line);border-radius:22px;overflow:hidden;
+    background:linear-gradient(180deg,rgba(14,74,68,.55),rgba(11,58,53,.65))}
+  .ptools{padding:20px 22px 14px;border-bottom:1px solid rgba(224,189,85,.14)}
+  .search{display:flex;gap:10px;align-items:center;background:#0a322d;border:1px solid rgba(224,189,85,.25);border-radius:14px;padding:4px 6px 4px 16px;transition:border-color .2s}
+  .search:focus-within{border-color:var(--gold)}
+  .search svg{flex:none;opacity:.7}
+  .search input{flex:1;min-width:0;background:transparent;border:0;color:var(--ink);font:inherit;font-size:15px;padding:11px 0;outline:none}
+  .search .clr{border:0;background:transparent;color:var(--muted);font-size:22px;cursor:pointer;width:36px;height:36px;border-radius:10px;line-height:1}
+  .search .clr:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  @media(max-width:640px){.chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin;margin-right:-14px;padding-right:14px}}
+  .chip{flex:none;border:1px solid rgba(224,189,85,.25);background:transparent;color:#cfe2de;border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer;transition:.2s;white-space:nowrap}
+  .chip:hover{border-color:var(--gold)}
+  .chip.on{background:var(--gold);border-color:var(--gold);color:#1a1407;font-weight:600}
+  .chip small{opacity:.7;margin-left:4px}
+  .pcount{color:var(--muted);font-size:13px;margin-top:10px}
+  .plist{max-height:min(70vh,720px);overflow:auto;overscroll-behavior:contain}
+  .plist::-webkit-scrollbar{width:10px}
+  .plist::-webkit-scrollbar-thumb{background:rgba(224,189,85,.25);border-radius:10px;border:3px solid transparent;background-clip:padding-box}
+  .pg{padding:22px 22px 6px;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold2)}
+  .pg small{font-family:Manrope,sans-serif;font-size:12px;color:var(--muted);margin-left:8px;letter-spacing:.05em}
+  .pgen{position:sticky;top:0;z-index:2;background:#0d3f3a;padding:9px 22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;
+    border-top:1px solid rgba(224,189,85,.12);border-bottom:1px solid rgba(224,189,85,.12)}
+  .pi{display:grid;grid-template-columns:1fr 210px 110px 40px;gap:14px;align-items:center;padding:10px 14px 10px 22px;border-bottom:1px solid rgba(255,255,255,.05);font-size:14.5px}
+  .pi:hover{background:rgba(255,255,255,.03)}
+  .pi .c{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+  .pi .p{text-align:right;color:var(--gold2);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:500}
+  .pi .add{width:32px;height:32px;border-radius:9px;border:1px solid rgba(224,189,85,.35);background:transparent;color:var(--gold);cursor:pointer;font-size:18px;line-height:1;display:grid;place-items:center;transition:.2s}
+  .pi .add:hover{background:rgba(224,189,85,.12)}
+  .pi.sel{background:rgba(224,189,85,.09)}
+  .pi.sel .add{background:var(--gold);color:#1a1407;border-color:var(--gold)}
+  .pi mark{background:rgba(224,189,85,.3);color:inherit;border-radius:3px;padding:0 1px}
+  @media(max-width:640px){
+    .pi{grid-template-columns:1fr auto;grid-template-areas:"n a" "c p";row-gap:2px;padding:12px 14px 12px 16px}
+    .pi .n{grid-area:n}.pi .c{grid-area:c}.pi .p{grid-area:p}.pi .add{grid-area:a}
+    .pg{padding:18px 16px 4px}.pgen{padding:9px 16px}.ptools{padding:16px 14px 12px}
+  }
+  .pempty{padding:40px 22px;text-align:center;color:var(--muted)}
+  .pnote{padding:14px 22px 18px;border-top:1px solid rgba(224,189,85,.14);font-size:13px;color:var(--muted);line-height:1.6}
+  .pnote b{color:#cfe2de;font-weight:600}
+
+  /* панель запроса */
+  .req{position:fixed;left:50%;bottom:18px;z-index:50;transform:translate(-50%,140%);visibility:hidden;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility 0s .35s;
+    width:min(720px,calc(100% - 24px));display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    background:rgba(9,46,42,.94);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:12px 14px 12px 20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .req.show{transform:translate(-50%,0);visibility:visible;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .req .t{flex:1;min-width:150px;font-size:14px}
+  .req .t b{color:var(--gold2);font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500}
+  .req .t span{display:block;color:var(--muted);font-size:12px}
+  .req .acts{display:flex;gap:8px;flex-wrap:wrap}
+  .req .x{border:0;background:transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:13px;text-decoration:underline;text-underline-offset:3px}
+  .req .x:hover{color:var(--ink)}
+  body.has-req{padding-bottom:110px}
+  @media(max-width:540px){
+    .req{gap:10px;padding:12px 14px;bottom:12px}
+    .req .t{flex-basis:100%}.req .t span,.req .long{display:none}
+    .req .acts{width:100%;align-items:center;flex-wrap:nowrap}.req .acts .btn{padding:10px 14px}
+    .req #reqWa{flex:1}
+  }
+
+  /* контакты */
+  .contacts{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;margin-top:40px;align-items:start}
+  @media(max-width:900px){.contacts{grid-template-columns:1fr}}
+  .person{border:1px solid rgba(224,189,85,.14);border-radius:18px;padding:24px;background:var(--bg2)}
+  .person+.person{margin-top:18px}
+  .person .role{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .person h3{font-size:26px;margin:8px 0 4px;line-height:1.15}
+  .person .org{color:var(--muted);font-size:14px}
+  .person .ways{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .person a.ln{color:#cfe2de;text-decoration:none;border-bottom:1px solid rgba(158,193,188,.35);font-size:15px}
+  .person a.ln:hover{color:var(--ink)}
+  .person .line{margin-top:12px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+  .req-card{border:1px solid var(--line);border-radius:22px;padding:30px;background:linear-gradient(160deg,rgba(224,189,85,.1),rgba(11,58,53,.5))}
+  @media(max-width:540px){.req-card{padding:22px 18px}}
+  .req-card h3{font-size:28px;margin:6px 0 16px}
+  .req-card dl{margin:0;display:grid;grid-template-columns:auto 1fr;column-gap:22px}
+  .req-card dt,.req-card dd{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);margin:0;font-size:14.5px}
+  .req-card dt{color:var(--muted)}
+  .req-card dd{color:var(--ink);font-variant-numeric:tabular-nums;word-break:break-word}
+  @media(max-width:540px){.req-card dl{grid-template-columns:1fr}.req-card dt{border:0;padding-bottom:0;font-size:12.5px}}
+  .copy-ok{color:#bff0d4;font-size:13px;margin-left:12px;opacity:0;transition:opacity .3s}
+  .copy-ok.show{opacity:1}
+
+  /* лайтбокс */
+  .lb{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;flex-direction:column;
+    background:rgba(4,22,20,.92);backdrop-filter:blur(6px);padding:60px 16px 24px}
+  .lb.open{display:flex}
+  .lb img{max-width:min(1200px,100%);max-height:calc(100vh - 150px);border-radius:12px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6);background:var(--paper)}
+  .lb .cap{color:#d4e6e2;margin-top:14px;text-align:center;max-width:760px;font-size:15px}
+  .lb button{position:absolute;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);cursor:pointer;border-radius:50%;width:46px;height:46px;font-size:22px;line-height:1}
+  .lb button:hover{background:rgba(224,189,85,.18)}
+  .lb .close{top:14px;right:16px}
+  .lb .prev{left:16px;top:50%;transform:translateY(-50%)}
+  .lb .next{right:16px;top:50%;transform:translateY(-50%)}
+  @media(max-width:640px){.lb .prev,.lb .next{top:auto;bottom:16px;transform:none}}
+
+  footer{padding:54px 0 40px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer .docs{margin-top:10px}
+  footer .docs a{color:var(--muted);text-decoration:none;border-bottom:1px solid rgba(158,193,188,.35)}
+  footer .docs a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brandrow" href="#top" aria-label="ООО «ПРО СТОР» — наверх">
+      <span class="badge"><img src="assets/img/ecobos-logo.jpg" alt=""></span>
+      <span class="logo"><b>ПРО</b> СТОР<small>Консорциум «ЭкоБОС»</small></span>
+    </a>
+    <div class="links">
+      <a class="lnk" href="#about">О консорциуме</a>
+      <a class="lnk" href="#stages">Этапы</a>
+      <a class="lnk" href="#projects">Проекты</a>
+      <a class="lnk" href="#hedges">Рекомендации</a>
+      <a class="lnk" href="#price">Прайс</a>
+      <a class="lnk" href="#contacts">Контакты</a>
+    </div>
+    <a class="btn sm" href="#contacts">Связаться</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap inner">
+    <div class="hero-badge"><img src="assets/img/ecobos-logo.jpg" alt="Консорциум «ЭкоБОС»"></div>
+    <div class="kicker">ООО «ПРО СТОР» · исполнительный орган Консорциума «ЭкоБОС»</div>
+    <h1><em>Озеленение</em> автомобильных дорог</h1>
+    <p class="lead">Консорциум разрабатывает и реализует комплексные программы и проекты озеленения и благоустройства — от дендрологического обследования полосы отвода до живых изгородей и разноуровневых посадок вдоль дорог — и выращивает посадочный материал, адаптированный к различным климатическим зонам.</p>
+    <div class="cta">
+      <a class="btn" href="#price">Смотреть прайс</a>
+      <a class="btn ghost" href="https://wa.me/79853308788" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+    <div class="seal"><i>ЭБ</i> Экология · Озеленение · Благоустройство · Строительство</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="strip"><img src="assets/img/nursery-strip.jpg" alt="Питомник: ряды хвойных и лиственных саженцев в контейнерах"></div>
+  <div class="strip-cap">Живые деревья · саженцы · озеленение · доставка · экотехнологии · спецтехника для транспортировки и посадки · длинномеры</div>
+  <div class="stats">
+    <div class="stat"><b>3 млрд ₽+</b><span>совокупный годовой оборот участников Консорциума</span></div>
+    <div class="stat"><b id="stItems">1 059</b><span>позиций в прайс-листе посадочного материала</span></div>
+    <div class="stat"><b id="stGroups">7</b><span>групп растений: деревья, кустарники, многолетники, плодовые, розы, хвойные</span></div>
+    <div class="stat"><b>до 70%</b><span>пыли и аэрозолей поглощают растения из воздуха</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="disc">
+      <div class="sec-head">
+        <div class="kicker">О консорциуме</div>
+        <h2>Экология, озеленение, благоустройство, строительство</h2>
+        <p>Общество с ограниченной ответственностью «ПРО СТОР» является исполнительным органом Консорциума «Экология Озеленение Благоустройство Строительство» (Консорциум «ЭкоБОС»), занимающегося разработкой и реализацией комплексных программ и проектов.</p>
+        <p class="body"><b class="gold">Совокупный годовой оборот участников Консорциума — более 3 млрд рублей.</b></p>
+        <p class="fine">Консорциум не является юридическим лицом. Участники Консорциума действуют на основании своих уставов, подписанного Соглашения и иных договоров, заключаемых как между отдельными Участниками, так и между Консорциумом либо отдельными его Участниками и третьими лицами, привлечёнными для реализации проектов, программ и мероприятий в рамках совместной деятельности.</p>
+      </div>
+      <div class="ex org">
+        <div class="lbl">Структура</div>
+        <div class="node"><b>Консорциум «ЭкоБОС»</b><span>участники действуют на основании подписанного Соглашения</span></div>
+        <div class="node"><b>Совет директоров</b><span>Председатель — Залуцкий Василий Викторович</span></div>
+        <div class="node on"><b>ООО «ПРО СТОР»</b><span>исполнительный орган · генеральный директор Хмелев Олег Сергеевич</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Направления деятельности</h3>
+    <div class="grid4">
+      <div class="pcard"><div class="n">01</div><h3>Экологическая политика</h3><p>Содействие в реализации государственной политики в сфере защиты окружающей среды, продвижение лучших международных и национальных практик в сфере экологии.</p></div>
+      <div class="pcard"><div class="n">02</div><h3>Благоустройство и озеленение</h3><p>Строительство, благоустройство, создание комфортной окружающей среды и озеленение городов, населённых пунктов, отдельных территорий и инфраструктурных объектов.</p></div>
+      <div class="pcard"><div class="n">03</div><h3>Рекреация и лес</h3><p>Рекреационные работы, очистка сточных вод и укрепление береговой линии, лесовосстановление и лесоразведение.</p></div>
+      <div class="pcard"><div class="n">04</div><h3>Посадочный материал</h3><p>Выращивание посадочного материала, соответствующего лучшим международным стандартам и адаптированного к различным климатическим зонам.</p></div>
+      <div class="pcard"><div class="n">05</div><h3>Земли в оборот</h3><p>Запуск в оборот неиспользуемых сельскохозяйственных площадей и иных участков, пригодных для выращивания дикорастущих растений, в том числе лекарственных трав, и саженцев.</p></div>
+      <div class="pcard"><div class="n">06</div><h3>Инфраструктура общества</h3><p>Преодоление структурного кризиса современной цивилизации, социально ориентированное инфраструктурное обустройство общества.</p></div>
+      <div class="pcard"><div class="n">07</div><h3>Подготовка кадров</h3><p>Формирование современной эффективной системы профессиональной подготовки квалифицированных кадров.</p></div>
+      <div class="pcard"><div class="n">08</div><h3>Охрана среды</h3><p>Реализация иных мероприятий в сфере экологии и охраны окружающей среды.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="stages">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Как мы работаем</div>
+      <h2>Этапы создания системы зелёных насаждений</h2>
+      <p>на территориях, прилегающих к автодороге</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="b">1</div><h3>Изыскания</h3><p>Изыскательские работы по выявлению функциональной принадлежности территорий к тому или иному виду автодороги и выделению отдельных зон, подлежащих благоустройству и озеленению.</p></div>
+      <div class="step"><div class="b">2</div><h3>Ландшафтный анализ</h3><p>Натурное обследование и дендрологическое описание существующих насаждений: ценность природных компонентов, пространственные и визуальные характеристики среды, общие требования к концептуальным схемам благоустройства и озеленения.</p></div>
+      <div class="step"><div class="b">3</div><h3>Проектная документация</h3><p>Разработка на основе натурного дендрологического обследования, в том числе методом ландшафтной таксации насаждений в полосе отвода, с учётом расположения и класса автодороги.</p></div>
+      <div class="step"><div class="b">4</div><h3>Земли и расчёты</h3><p>Определение принадлежности насаждений и категории земель: муниципальные, федеральные (лесной фонд), сельскохозяйственные, частные домовладения, промышленные территории. Расчёты за вырубку зелёных насаждений.</p></div>
+    </div>
+    <div class="result">
+      <div><b>◆</b><span><b>Дендроплан.</b> На основании общего проектного решения по объекту «Автомобильная дорога» составляется дендроплан в заданном масштабе и перечётная ведомость с параметрами существующих зелёных насаждений.</span></div>
+      <div><b>◆</b><span><b>Итог.</b> Реализуются композиционные приёмы благоустройства и озеленения линейных объектов.</span></div>
+      <div><b>◆</b><span><b>Сохранение.</b> Для благоустройства прилегающего пространства максимально сохраняются существующие насаждения как часть общей системы озеленения построенного объекта.</span></div>
+      <div><b>◆</b><span><b>Типы насаждений.</b> Рядовые посадки, группы деревьев и кустарников, живые изгороди.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Архитектурно-ландшафтная организация</div>
+      <h2>Примеры ландшафтной организации придорожных территорий</h2>
+      <p>Это целый комплекс задач, которые решаются по установленному алгоритму, включая проектные мероприятия по заранее утверждённому техническому заданию. Примеры — для дорог различного назначения с учётом ограничений, утверждённых законодательно-правовыми документами, полосы отвода и проектируемых коммуникаций.</p>
+    </div>
+    <div class="grid2">
+      <figure class="case" style="margin:0"><div class="pics one">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/road-federal.jpg" alt="Озеленение автомобильной дороги федерального значения, проходящей через жилой частный сектор"></div>
+      </div><figcaption><span class="n">01</span>Озеленение автомобильной дороги федерального значения, проходящей через жилой частный сектор</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics one">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/road-odintsovo.jpg" alt="Круговая развязка в Одинцовском районе Московской области"></div>
+      </div><figcaption><span class="n">02</span>Круговая развязка в Одинцовском р-не Московской обл.</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/exit-1.jpg" alt="Озеленение съезда на прилегающую территорию"></div>
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/exit-2.jpg" alt="Озеленение съезда на прилегающую территорию, визуализация"></div>
+      </div><figcaption><span class="n">03</span>Озеленение съезда на прилегающую территорию</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/visual-1.jpg" alt="Визуализация автомобильной дороги с максимальным сохранением насаждений"></div>
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/visual-2.jpg" alt="Визуализация автомобильной дороги через лесной массив"></div>
+      </div><figcaption><span class="n">04</span>Визуализация автомобильных дорог с максимальным сохранением насаждений (фрагменты)</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/interchange-1.jpg" alt="Озеленение транспортной развязки"></div>
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/interchange-2.jpg" alt="Озеленение транспортной развязки у реки"></div>
+      </div><figcaption><span class="n">05</span>Озеленение транспортных развязок</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/embankment-1.jpg" alt="Генплан набережной вдоль дороги муниципального значения"></div>
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/embankment-2.jpg" alt="Набережная с велодорожкой и цветниками"></div>
+      </div><figcaption><span class="n">06</span>Ландшафтная организация прилегающей к дороге муниципального значения территории (набережная)</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/m1-rest-1.jpg" alt="Площадка отдыха на федеральной дороге М-1"></div>
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/m1-rest-2.jpg" alt="Площадка отдыха на федеральной дороге М-1, вид сверху"></div>
+      </div><figcaption><span class="n">07</span>Площадка отдыха на федеральной дороге М-1, 154-й км</figcaption></figure>
+      <figure class="case" style="margin:0"><div class="pics">
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/unity-1.jpg" alt="Рядовая посадка деревьев вдоль дороги"></div>
+        <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/unity-2.jpg" alt="Озеленение вдоль пешеходной зоны у эстакады"></div>
+      </div><figcaption><span class="n">08</span>Визуальное объединение окружающего пространства с элементами дороги</figcaption></figure>
+    </div>
+
+    <h3 class="sub">Озеленение территорий транспортно-пересадочных узлов и вокзалов</h3>
+    <div class="tiles">
+      <figure class="tile"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/tpu-khovrino.jpg" alt="Москва, ТПУ «Ховрино»"></div><figcaption>Москва, <b>ТПУ «Ховрино»</b></figcaption></figure>
+      <figure class="tile"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/tpu-nekrasovka.jpg" alt="Москва, ТПУ «Некрасовка»"></div><figcaption>Москва, <b>ТПУ «Некрасовка»</b></figcaption></figure>
+      <figure class="tile"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/tpu-lukhmanovskaya.jpg" alt="Москва, ТПУ «Лухмановская»"></div><figcaption>Москва, <b>ТПУ «Лухмановская»</b></figcaption></figure>
+      <figure class="tile"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/paveletskaya.jpg" alt="Москва, Павелецкая площадь"></div><figcaption>Москва, <b>Павелецкая площадь</b></figcaption></figure>
+      <figure class="tile"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/cherkizovskaya.jpg" alt="Москва, вокзал на Черкизовской"></div><figcaption>Москва, <b>вокзал на Черкизовской</b></figcaption></figure>
+      <figure class="tile"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/slavyansky.jpg" alt="Москва, станция метро «Славянский бульвар»"></div><figcaption>Москва, <b>ст. м. «Славянский бульвар»</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="hedges">
+  <div class="wrap">
+    <div class="disc">
+      <div class="sec-head">
+        <div class="kicker">Рекомендации</div>
+        <h2>Ограждения из растений</h2>
+        <p>Для защиты от шума, пыли и грязи, достижения декорирующего эффекта, а также в качестве ограничивающих пешеходов элементов наиболее рациональным является озеленение. Применение растений в качестве ограждения универсально и подходит к любому типу городской среды.</p>
+        <p class="body">Растения способны поглощать из воздуха до 70% пыли и аэрозолей, предотвращая эффект вторичного загрязнения. Увеличение площади зелёных насаждений улучшает экологию и качество жизни людей. Поэтому для формирования экологического каркаса города приоритетно использовать в качестве ограждения озеленение — там, где это возможно.</p>
+      </div>
+      <div class="ex">
+        <div class="lbl">Почему растения</div>
+        <div class="now">до 70%</div>
+        <div class="cap">пыли и аэрозолей поглощают растения из воздуха</div>
+        <div class="split" aria-hidden="true"><i class="a"></i></div>
+        <div class="legend"><span>поглощают растения</span><span>защита от шума, пыли и грязи</span></div>
+      </div>
+    </div>
+
+    <div class="row5">
+      <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/hedge-1.jpg" alt="Шумозащитный экран с вьющимися растениями"></div>
+      <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/hedge-2.jpg" alt="Цветочные вазоны вдоль проезжей части"></div>
+      <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/hedge-3.jpg" alt="Вертикальное озеленение стены кашпо"></div>
+      <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/hedge-4.jpg" alt="Живая изгородь и деревья вдоль тротуара"></div>
+      <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/hedge-5.jpg" alt="Зелёный откос вдоль дороги"></div>
+    </div>
+
+    <h3 class="sub">Формы озеленения вдоль дороги</h3>
+    <div class="tags">
+      <span class="tag">Живая изгородь из кустарников</span><span class="tag">Плотные посадки деревьев</span>
+      <span class="tag">Многослойное разноуровневое озеленение</span><span class="tag">Древовидные лианы</span>
+      <span class="tag">Геопластика</span><span class="tag">Растения в вазонах</span><span class="tag">Озеленение в горшках на ограждении</span>
+    </div>
+    <p class="body" style="max-width:820px">В местах, где нет возможности применять ограждения из растений, в качестве декоративного улучшения среды можно применять растения в вазонах и размещать озеленение в горшках на ограждении.</p>
+    <div class="notes">
+      <div class="note">Рекомендуется подбирать растения, <b>устойчивые к городской среде и климату региона</b>.</div>
+      <div class="note warn">Не рекомендуется использовать <b>клён ясенелистный</b>: он занесён в «Чёрную книгу» России и считается агрессивным и не подходящим деревом для озеленения городов.</div>
+    </div>
+
+    <div class="grid2">
+      <div class="xp">
+        <div class="kicker">Мировая практика</div>
+        <h3>Опыт других стран и городов</h3>
+        <p>Многие современные урбанисты считают, что дорожное ограждение в городе подвергает риску здоровье и жизнь пешеходов, разлетаясь во время ДТП, является чрезмерной тратой городского бюджета, создаёт некомфортную психологическую нагрузку на водителей и пешеходов, стимулирует высокую скорость автомобильного потока.</p>
+        <p>В мире наблюдается тенденция отказа от дорожного ограждения.</p>
+        <div class="pics">
+          <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/abroad-paris.jpg" alt="Бульвар с аллеей деревьев"></div>
+          <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/abroad-street.jpg" alt="Городская улица без дорожного ограждения"></div>
+          <div class="ph wide" tabindex="0"><img loading="lazy" src="assets/img/abroad-oslo.jpg" alt="Пешеходная улица с цветниками вместо ограждений"></div>
+        </div>
+      </div>
+      <div class="xp">
+        <div class="kicker">Российский опыт</div>
+        <h3>Красноярск: вывод по анализу</h3>
+        <ol>
+          <li>В городе применяется живая изгородь, обустраиваются буферные зоны между дорогой и тротуаром в виде разноуровневого озеленения, но недостаточно. Редко применяется геопластика.</li>
+          <li>Можно увидеть примеры комбинированного ограждения: живая изгородь и металлическое ограждение.</li>
+          <li>Есть примеры необоснованной установки металлического ограждения при наличии большой площади озеленения.</li>
+          <li>Не применяется замена на озеленение оперативно установленных декорирующих ограждений.</li>
+        </ol>
+        <div class="pics">
+          <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/krsk-1.jpg" alt="Красноярск: буферная зона из деревьев и кустарников"></div>
+          <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/krsk-2.jpg" alt="Красноярск: комбинированное ограждение"></div>
+          <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/krsk-3.jpg" alt="Красноярск: аллея вдоль проспекта"></div>
+          <div class="ph" tabindex="0"><img loading="lazy" src="assets/img/krsk-4.jpg" alt="Красноярск: живая изгородь у жилого дома"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2" style="align-items:start;margin-top:64px">
+      <div>
+        <div class="kicker">Ограждения из растений</div>
+        <h3 class="sub" style="margin-top:12px">Общие рекомендации</h3>
+        <ul class="dash">
+          <li>Следует всегда применять зелёные насаждения при достаточной ширине улицы — при наличии расстояния от дороги до застройки.</li>
+          <li>Живая изгородь высотой от 1 до 1,5 м обеспечивает защиту от пыли и грязи и ограничивает передвижение пешеходов в неположенном месте.</li>
+          <li>Рекомендуется использовать быстрорастущие кустарники — рябинник рябинолистный и сирень венгерскую.</li>
+          <li>Изгороди следует регулярно подстригать и соблюдать разрывы на перекрёстках, чтобы они не перекрывали обзор водителям.</li>
+        </ul>
+        <div class="metrics">
+          <div class="metric"><b>1–1,5 м</b><span>высота живой изгороди</span></div>
+          <div class="metric"><b>0,7–1 м</b><span>минимум между автодорогой и пешеходной частью</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="paper ph" tabindex="0" style="cursor:zoom-in"><img loading="lazy" src="assets/img/scheme-hedge.jpg" alt="Схема: живая изгородь высотой 1,5 м между проезжей частью и тротуаром"></div>
+        <div class="ph" tabindex="0" style="margin-top:14px;aspect-ratio:16/9"><img loading="lazy" src="assets/img/hedge-house.jpg" alt="Живая изгородь вдоль улицы перед деревянным домом"></div>
+      </div>
+    </div>
+    <div class="notes">
+      <div class="note">Существующее дорожное ограждение по возможности следует <b>заменять на живую изгородь</b>.</div>
+      <div class="note">Комбинирование живой изгороди и ограждения предотвращает вытаптывание посадок и <b>усиливает удерживающую функцию</b>.</div>
+      <div class="note">Внешний облик ограждения должен <b>соподчиняться окружающему городскому пространству</b>.</div>
+    </div>
+
+    <h3 class="sub">Разноуровневые посадки</h3>
+    <p class="subp">Озеленение не менее эффективно для шумозащиты и декорирования городской застройки. Для максимального эффекта применяются разноуровневые посадки — кустарники и деревья. Учитывая разные сроки роста и достижения максимального объёма, для быстрого эффекта следует применять комбинирование.</p>
+    <div class="steps two">
+      <div class="step"><div class="b">1</div><h3>Передний фронт</h3><p>Из быстрорастущих растений, например высоких кустарников: сирень венгерская (3–4 м), карагана древовидная (3–4 м), рябинник рябинолистный (2–2,5 м).</p></div>
+      <div class="step"><div class="b">2</div><h3>Второй план</h3><p>Быстро- и медленнорастущие сорта деревьев. В зависимости от эстетического состояния кустарник в будущем может сохраняться либо удаляться после формирования требуемой плотности зелёной массы второго ряда.</p></div>
+    </div>
+    <div class="grid2">
+      <div class="paper ph" tabindex="0"><img loading="lazy" src="assets/img/scheme-multi-1.jpg" alt="Схема разноуровневой посадки: кустарник и дерево в буферной зоне шириной 4,2 м"></div>
+      <div class="paper ph" tabindex="0"><img loading="lazy" src="assets/img/scheme-multi-2.jpg" alt="Схема посадки: изгородь у дороги и дерево за тротуаром"></div>
+    </div>
+    <div class="notes"><div class="note">Между дорогой и тротуаром всегда рекомендуется создание <b>зелёной буферной зоны</b>.</div></div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="plants">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Ассортимент для придорожных посадок</div>
+      <h2>Растения, подходящие для посадки вдоль дороги</h2>
+      <p>Минимальный размер посадочного материала: кустарники — от 0,5 м, деревья — 2–2,5 м.</p>
+    </div>
+    <h3 class="sub" style="margin-top:44px">Кустарники переднего плана</h3>
+    <div class="grid4" style="margin-top:22px">
+      <figure class="plant"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/plant-rosa.jpg" alt="Роза морщинистая"></div>
+        <figcaption><span class="ht">до 1,5 м</span><span class="nm">Роза морщинистая</span><button class="to-price" data-q="Роза морщинистая" hidden></button></figcaption></figure>
+      <figure class="plant"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/plant-syringa.jpg" alt="Сирень венгерская"></div>
+        <figcaption><span class="ht">3–4 м</span><span class="nm">Сирень венгерская</span><button class="to-price" data-q="Сирень венгерская" hidden></button></figcaption></figure>
+      <figure class="plant"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/plant-sorbaria.jpg" alt="Рябинник рябинолистный"></div>
+        <figcaption><span class="ht">2–2,5 м</span><span class="nm">Рябинник рябинолистный</span><button class="to-price" data-q="Рябинник рябинолистный" hidden></button></figcaption></figure>
+      <figure class="plant"><div class="ph" tabindex="0"><img loading="lazy" src="assets/img/plant-caragana.jpg" alt="Карагана древовидная"></div>
+        <figcaption><span class="ht">3–4 м</span><span class="nm">Карагана древовидная</span><button class="to-price" data-q="Карагана древовидная" hidden></button></figcaption></figure>
+    </div>
+    <h3 class="sub" style="margin-top:44px">Второй план и большая санитарно-защитная зона</h3>
+    <div class="grid4" style="margin-top:22px">
+      <figure class="plant"><div class="ph tall" tabindex="0"><img loading="lazy" src="assets/img/tree-malus-pyrus.jpg" alt="Яблоня сибирская и груша уссурийская"></div>
+        <figcaption><span class="ht">6–7 м / 10 м</span><span class="nm">Яблоня сибирская / Груша уссурийская</span></figcaption></figure>
+      <figure class="plant"><div class="ph tall" tabindex="0"><img loading="lazy" src="assets/img/tree-ulmus.jpg" alt="Вяз мелколистный"></div>
+        <figcaption><span class="ht">13 м</span><span class="nm">Вяз мелколистный</span></figcaption></figure>
+      <figure class="plant"><div class="ph tall" tabindex="0"><img loading="lazy" src="assets/img/tree-padus.jpg" alt="Черёмуха Маака и черёмуха виргинская"></div>
+        <figcaption><span class="ht">15 м / 5–7 м</span><span class="nm">Черёмуха Маака / Черёмуха виргинская</span></figcaption></figure>
+      <figure class="plant"><div class="ph tall" tabindex="0"><img loading="lazy" src="assets/img/tree-populus.jpg" alt="Тополь белый и тополь пирамидальный"></div>
+        <figcaption><span class="ht">25–30 м / 20 м</span><span class="nm">Тополь белый / Тополь пирамидальный</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="fences">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Рекомендации</div>
+      <h2>Внешний облик ограждений на придорожной территории</h2>
+      <p>Ограждение рекомендуется устанавливать, когда иные способы решения задач по шумо-, грязе- и пылезащите, обеспечению безопасности дорожного движения и декорированию застройки не справляются.</p>
+    </div>
+    <p class="body" style="max-width:820px">Внешний облик и цветовое решение ограждений следует ограничить одним цветом, соответствующим окружающей среде и элементам благоустройства. Предпочтение — тёплым оттенкам серого и серо-коричневого. Не рекомендуется применение ярких, открытых цветов: лучше сложные, глубокие оттенки, сочетающиеся с окружающей средой.</p>
+    <div class="ctx-strip ph" tabindex="0"><img loading="lazy" src="assets/img/fence-context.jpg" alt="Историческая среда, рекреация и улица: три типа городской среды"></div>
+    <div class="grid3 ctx" style="margin-top:22px">
+      <div class="pcard"><div class="n">I</div><h3>Историческая среда</h3><p>Цветовое решение соподчиняется цветовому решению улицы.</p></div>
+      <div class="pcard"><div class="n">II</div><h3>Рекреация</h3><p>Колористическое решение должно подчёркивать качества среды.</p></div>
+      <div class="pcard"><div class="n">III</div><h3>Улица</h3><p>Рекомендуется использовать оттенки серого и бежевого цвета.</p></div>
+    </div>
+    <div class="notes">
+      <div class="note warn"><b>Размещение рекламы на дорожных ограждениях не допускается.</b></div>
+      <div class="note">Ограждения должны быть выполнены из <b>антикоррозийных, легко очищающихся материалов</b>, стойких к городской среде.</div>
+      <div class="note">Любое ограждение должно соответствовать всем <b>нормативно-техническим характеристикам</b>, к нему предъявляемым.</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="price">
+  <div class="wrap">
+    <div class="price-top">
+      <div class="sec-head">
+        <div class="kicker">Посадочный материал</div>
+        <h2>Прайс-лист</h2>
+        <p id="priceLead">Лиственные и хвойные деревья, кустарники, многолетники, плодовые и розы.</p>
+      </div>
+      <div class="dl">
+        <a class="btn ghost sm" href="docs/prostor-price.xlsx" download>Скачать прайс · XLSX</a>
+      </div>
+    </div>
+
+    <div class="pbox">
+      <div class="ptools">
+        <div class="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0bd55" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="pq" type="search" placeholder="Поиск: сирень, туя, 'Annabelle', С20…" autocomplete="off" aria-label="Поиск по прайсу">
+          <button class="clr" id="pqClr" aria-label="Очистить поиск" hidden>×</button>
+        </div>
+        <div class="chips" id="chips" role="tablist" aria-label="Группы растений"></div>
+        <div class="pcount" id="pcount"></div>
+      </div>
+      <div class="plist" id="plist"></div>
+      <div class="pnote">
+        <b>Характеристика:</b> С3, С20 — объём контейнера, л · Р9 — горшок 9 см · КОМ — с комом земли · ОКС — открытая корневая система · 10/12 — обхват ствола, см · 175-200 — высота, см (у плодовых саженцев — м).
+        Цены в рублях. Нажмите <b>+</b>, чтобы собрать позиции в запрос, и отправьте его в WhatsApp или на e-mail.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divline"></div></div>
+
+<section id="contacts">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Контакты</div>
+      <h2>Наши реквизиты</h2>
+    </div>
+    <div class="contacts">
+      <div>
+        <div class="person">
+          <div class="role">Председатель Совета директоров</div>
+          <h3>Залуцкий Василий Викторович</h3>
+          <div class="org">Консорциум «ЭкоБОС»</div>
+          <div class="line"><a class="ln" href="tel:+79850994901">+7 985 099-49-01</a></div>
+          <div class="ways"><a class="btn ghost sm" href="https://wa.me/79850994901" target="_blank" rel="noopener">WhatsApp</a></div>
+        </div>
+        <div class="person">
+          <div class="role">Генеральный директор</div>
+          <h3>Хмелев Олег Сергеевич</h3>
+          <div class="org">ООО «ПРО СТОР» — исполнительный орган Консорциума</div>
+          <div class="line">
+            <a class="ln" href="tel:+79853308788">+7 985 330-87-88</a>
+            <a class="ln" href="mailto:oleg-khmelev@mail.ru">oleg-khmelev@mail.ru</a>
+          </div>
+          <div class="ways">
+            <a class="btn sm" href="https://wa.me/79853308788" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn ghost sm" href="mailto:oleg-khmelev@mail.ru">Написать на e-mail</a>
+          </div>
+        </div>
+      </div>
+      <div class="req-card">
+        <div class="kicker">Исполнительный орган</div>
+        <h3>ООО «ПРО СТОР»</h3>
+        <dl id="reqs">
+          <dt>Полное наименование</dt><dd>Общество с ограниченной ответственностью «ПРО СТОР»</dd>
+          <dt>ИНН</dt><dd>9713017571</dd>
+          <dt>ОГРН</dt><dd>1247700481148</dd>
+          <dt>Юридический адрес</dt><dd>127238, г. Москва, проезд 3-й Нижнелихоборский, 1а, 6, помещ. 6Д/4</dd>
+          <dt>Банк</dt><dd>Филиал «Корпоративный» ПАО «Совкомбанк» (г. Москва)</dd>
+          <dt>Расчётный счёт</dt><dd>40702810812010670444</dd>
+          <dt>Корр. счёт</dt><dd>30101810445250000360</dd>
+          <dt>БИК</dt><dd>044525360</dd>
+          <dt>Телефон / факс</dt><dd>+7 985 330-87-88 (WhatsApp)</dd>
+          <dt>E-mail</dt><dd>oleg-khmelev@mail.ru</dd>
+          <dt>Генеральный директор</dt><dd>Хмелев Олег Сергеевич</dd>
+        </dl>
+        <div style="margin-top:22px;display:flex;align-items:center;flex-wrap:wrap;gap:10px">
+          <button class="btn sm" id="copyReqs">Скопировать реквизиты</button>
+          <span class="copy-ok" id="copyOk">Скопировано</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="brandrow"><span class="badge" style="width:30px;height:30px;border-radius:8px"><img src="assets/img/ecobos-logo.jpg" alt=""></span><div class="logo" style="font-size:20px"><b>ПРО</b> СТОР</div></div><div style="margin-top:8px">Исполнительный орган Консорциума «Экология Озеленение Благоустройство Строительство»</div></div>
+    <div>ИНН 9713017571 · ОГРН 1247700481148
+      <div class="docs"><a href="docs/ecobos-presentation.pdf" target="_blank">Презентация (PDF)</a> · <a href="docs/prostor-price.xlsx" download>Прайс-лист (XLSX)</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- панель запроса по прайсу -->
+<div class="req" id="req" aria-live="polite">
+  <div class="t"><b id="reqN">0</b> поз. в запросе<span>Количество и условия уточним в ответе</span></div>
+  <div class="acts">
+    <button class="x" id="reqClear">Очистить</button>
+    <a class="btn ghost sm" id="reqMail" href="#">E-mail</a>
+    <a class="btn sm" id="reqWa" href="#" target="_blank" rel="noopener"><span class="long">Отправить в&nbsp;</span>WhatsApp</a>
+  </div>
+</div>
+
+<!-- лайтбокс -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="close" aria-label="Закрыть">×</button>
+  <button class="prev" aria-label="Предыдущее фото">‹</button>
+  <button class="next" aria-label="Следующее фото">›</button>
+  <img alt="">
+  <div class="cap"></div>
+</div>
+
+<script src="assets/price.js"></script>
+<script>
+var WA_PHONE='79853308788', MAIL='oleg-khmelev@mail.ru';
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function norm(s){return String(s).toLowerCase().replace(/ё/g,'е').replace(/[`'‘’"«»]/g,'').replace(/\s+/g,' ').trim();}
+function fmtRub(v){return v.toLocaleString('ru-RU',{maximumFractionDigits:2})+' ₽';}
+function plural(n,a,b,c){var m=n%10,h=n%100;return m===1&&h!==11?a:(m>=2&&m<=4&&(h<12||h>14)?b:c);}
+
+/* ── прайс ── */
+var P=window.PRICE||{groups:[]}, ITEMS=[], GROUPS=[];
+P.groups.forEach(function(g,gi){
+  var cnt=0;
+  g[1].forEach(function(gen){gen[1].forEach(function(it){
+    ITEMS.push({id:ITEMS.length,g:gi,gen:gen[0],name:it[0],ch:it[1],price:it[2],key:norm(it[0]+' '+gen[0]+' '+it[1])});cnt++;
+  });});
+  GROUPS.push({name:g[0],count:cnt});
+});
+var state={group:-1,q:''}, picked={};
+
+document.getElementById('stItems').textContent=ITEMS.length.toLocaleString('ru-RU');
+document.getElementById('stGroups').textContent=GROUPS.length;
+document.getElementById('priceLead').textContent=ITEMS.length.toLocaleString('ru-RU')+' '+plural(ITEMS.length,'позиция','позиции','позиций')+
+  ': лиственные и хвойные деревья, кустарники, многолетники, плодовые и розы.'+(P.date?' Прайс от '+P.date+'.':'');
+
+var chips=document.getElementById('chips');
+chips.innerHTML='<button class="chip on" data-g="-1">Все<small>'+ITEMS.length+'</small></button>'+
+  GROUPS.map(function(g,i){return '<button class="chip" data-g="'+i+'">'+escapeHtml(g.name)+'<small>'+g.count+'</small></button>';}).join('');
+chips.addEventListener('click',function(e){
+  var b=e.target.closest('.chip'); if(!b) return;
+  state.group=+b.getAttribute('data-g');
+  chips.querySelectorAll('.chip').forEach(function(c){c.classList.toggle('on',c===b);});
+  renderPrice();
+});
+
+function hl(text,words){
+  if(!words.length) return escapeHtml(text);
+  var re=new RegExp('('+words.map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/е/g,'[её]');}).join('|')+')','gi');
+  return text.split(re).map(function(part,i){return i%2?'<mark>'+escapeHtml(part)+'</mark>':escapeHtml(part);}).join('');
+}
+
+function renderPrice(){
+  var words=norm(state.q).split(' ').filter(Boolean);
+  var list=ITEMS.filter(function(it){
+    if(state.group>=0&&it.g!==state.group) return false;
+    for(var i=0;i<words.length;i++) if(it.key.indexOf(words[i])<0) return false;
+    return true;
+  });
+  var html='', lastG=-1, lastGen='';
+  list.forEach(function(it){
+    if(it.g!==lastG){lastG=it.g;lastGen='';
+      if(state.group<0) html+='<div class="pg">'+escapeHtml(GROUPS[it.g].name)+'</div>';}
+    if(it.gen!==lastGen){lastGen=it.gen;html+='<div class="pgen">'+escapeHtml(it.gen)+'</div>';}
+    var sel=picked[it.id]?' sel':'';
+    html+='<div class="pi'+sel+'" data-id="'+it.id+'"><div class="n">'+hl(it.name,words)+'</div><div class="c">'+escapeHtml(it.ch)+
+      '</div><div class="p">'+fmtRub(it.price)+'</div><button class="add" aria-label="Добавить в запрос">'+(sel?'✓':'+')+'</button></div>';
+  });
+  var box=document.getElementById('plist');
+  box.innerHTML=html||'<div class="pempty">Ничего не нашлось. Попробуйте другое название или напишите нам — подберём замену.</div>';
+  box.scrollTop=0;
+  document.getElementById('pcount').textContent=list.length===ITEMS.length?'Всего '+ITEMS.length+' '+plural(ITEMS.length,'позиция','позиции','позиций'):
+    'Найдено: '+list.length+' из '+ITEMS.length;
+}
+
+var pq=document.getElementById('pq'), pqClr=document.getElementById('pqClr'), tmr;
+pq.addEventListener('input',function(){
+  pqClr.hidden=!pq.value; clearTimeout(tmr);
+  tmr=setTimeout(function(){state.q=pq.value;renderPrice();},120);
+});
+pqClr.addEventListener('click',function(){pq.value='';pqClr.hidden=true;state.q='';renderPrice();pq.focus();});
+
+function searchPrice(q){
+  pq.value=q; pqClr.hidden=false; state.q=q; state.group=-1;
+  chips.querySelectorAll('.chip').forEach(function(c){c.classList.toggle('on',c.getAttribute('data-g')==='-1');});
+  renderPrice();
+  document.getElementById('price').scrollIntoView({behavior:'smooth'});
+}
+
+/* ссылки «в прайсе» у карточек растений — только если позиции есть */
+document.querySelectorAll('.to-price').forEach(function(b){
+  var q=b.getAttribute('data-q'), k=norm(q);
+  var n=ITEMS.filter(function(it){return it.key.indexOf(k)>=0;}).length;
+  if(!n) return;
+  b.textContent='В прайсе: '+n+' '+plural(n,'позиция','позиции','позиций')+' →';
+  b.hidden=false;
+  b.addEventListener('click',function(){searchPrice(q);});
+});
+
+/* ── запрос по выбранным позициям ── */
+document.getElementById('plist').addEventListener('click',function(e){
+  var btn=e.target.closest('.add'); if(!btn) return;
+  var row=btn.closest('.pi'), id=+row.getAttribute('data-id');
+  if(picked[id]) delete picked[id]; else picked[id]=true;
+  row.classList.toggle('sel',!!picked[id]); btn.textContent=picked[id]?'✓':'+';
+  updateReq();
+});
+function reqText(){
+  var ids=Object.keys(picked).map(Number).sort(function(a,b){return a-b;});
+  return 'Здравствуйте! Прошу рассчитать стоимость и наличие по прайсу'+(P.date?' от '+P.date:'')+':\n'+
+    ids.map(function(id,i){var it=ITEMS[id];return (i+1)+'. '+it.name+' — '+it.ch+' — '+fmtRub(it.price);}).join('\n');
+}
+function updateReq(){
+  var n=Object.keys(picked).length, bar=document.getElementById('req');
+  bar.classList.toggle('show',n>0); document.body.classList.toggle('has-req',n>0);
+  if(!n) return;
+  document.getElementById('reqN').textContent=n;
+  var t=reqText();
+  document.getElementById('reqWa').href='https://wa.me/'+WA_PHONE+'?text='+encodeURIComponent(t);
+  document.getElementById('reqMail').href='mailto:'+MAIL+'?subject='+encodeURIComponent('Запрос по прайсу')+'&body='+encodeURIComponent(t);
+}
+document.getElementById('reqClear').addEventListener('click',function(){picked={};renderPrice();updateReq();});
+
+renderPrice();
+
+/* ── реквизиты ── */
+document.getElementById('copyReqs').addEventListener('click',function(){
+  var dts=document.querySelectorAll('#reqs dt'), dds=document.querySelectorAll('#reqs dd'), lines=[];
+  for(var i=0;i<dts.length;i++) lines.push(dts[i].textContent+': '+dds[i].textContent);
+  var text=lines.join('\n'), ok=document.getElementById('copyOk');
+  function done(){ok.classList.add('show');setTimeout(function(){ok.classList.remove('show');},1800);}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done).catch(fallback);}else fallback();
+  function fallback(){var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(ta);}
+});
+
+/* ── лайтбокс ── */
+var PH=[].slice.call(document.querySelectorAll('.ph')), lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('.cap'), cur=0;
+function capOf(ph){
+  var fc=ph.closest('.case'); fc=fc&&fc.querySelector('figcaption');
+  return fc?fc.lastChild.textContent.trim():ph.querySelector('img').alt;
+}
+function openLb(i){cur=(i+PH.length)%PH.length;var ph=PH[cur],img=ph.querySelector('img');
+  lbImg.src=img.src;lbImg.alt=img.alt;lbCap.textContent=capOf(ph);lb.classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+PH.forEach(function(ph,i){
+  ph.addEventListener('click',function(){openLb(i);});
+  ph.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);}});
+});
+lb.querySelector('.close').addEventListener('click',closeLb);
+lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();openLb(cur-1);});
+lb.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();openLb(cur+1);});
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+document.addEventListener('keydown',function(e){
+  if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape') closeLb(); else if(e.key==='ArrowLeft') openLb(cur-1); else if(e.key==='ArrowRight') openLb(cur+1);
+});
+</script>
+</body>
+</html>
