@@ -82,6 +82,7 @@
   @media(max-width:1060px){.nav .links{display:none}}
   @media(max-width:540px){.nav .btn{padding:10px 14px;font-size:11px;letter-spacing:.03em}}
   @media(max-width:380px){.nav .logo small{display:none}}
+  @media(max-width:360px){.nav .btn{padding:9px 11px;font-size:10.5px}}
   @media(prefers-reduced-motion:reduce){.btn::before{animation:none}html{scroll-behavior:auto}}
 
   /* hero */
@@ -339,7 +340,7 @@
   .person+.person{margin-top:18px}
   .person .role{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .person h3{font-size:26px;margin:8px 0 4px;line-height:1.15}
-  .person .org{color:var(--muted);font-size:14px}
+  .person .org{display:block;color:var(--muted);font-size:14px}
   .person .ways{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
   .person a.ln{color:#cfe2de;text-decoration:none;border-bottom:1px solid rgba(158,193,188,.35);font-size:15px}
   .person a.ln:hover{color:var(--ink)}
@@ -363,6 +364,7 @@
   .club-pill>span:last-child{color:var(--gold);transition:transform .25s}
   .club-pill:hover{border-color:var(--gold);background:rgba(224,189,85,.14)}
   .club-pill:hover>span:last-child{transform:translateX(3px)}
+  @media(max-width:360px){.club-pill{gap:8px;padding:6px 12px 6px 10px;font-size:12px}}
   .club{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:40px}
   @media(max-width:900px){.club{grid-template-columns:1fr}}
   .letter{position:relative;overflow:hidden;border:1px solid rgba(224,189,85,.14);border-radius:22px;padding:44px 44px 36px;background:var(--bg2)}
@@ -434,7 +436,7 @@
 
 <header class="hero" id="top">
   <div class="wrap inner">
-    <a class="club-pill" href="#club"><i></i><span>Партнёрство с <span class="nw">VIP бизнес-клубом</span> <span class="nw">ALEX PRO</span></span><span>→</span></a>
+    <a class="club-pill" href="#club"><i></i><span>Партнёрство с <span class="nw">VIP-клубом</span> <span class="nw">ALEX PRO</span></span><span>→</span></a>
     <div class="hero-badge"><img src="assets/img/ecobos-logo.jpg" alt="Консорциум «ЭкоБОС»"></div>
     <div class="kicker">ООО «ПРО СТОР» · исполнительный орган Консорциума «ЭкоБОС»</div>
     <h1><em>Озеленение</em> автомобильных дорог</h1>
@@ -828,9 +830,9 @@
           <div class="ways"><a class="btn ghost sm" href="https://wa.me/79850994901" target="_blank" rel="noopener">WhatsApp</a></div>
         </div>
         <div class="person">
-          <div class="role">Глава дипломатического VIP-клуба ALEX PRO</div>
+          <div class="role">Глава дипломатического <span class="nw">VIP-клуба</span> <span class="nw">ALEX PRO</span></div>
           <h3>Александер <span class="nw">Шапиро-Сулиман</span></h3>
-          <div class="org">Дипломатический VIP бизнес-клуб ALEX PRO — партнёр проекта</div>
+          <div class="org">Дипломатический <span class="nw">VIP бизнес-клуб</span> <span class="nw">ALEX PRO</span>&nbsp;— партнёр&nbsp;проекта</div>
           <div class="line">
             <a class="ln" href="tel:+79800895252">+7 980 089-52-52</a>
             <a class="ln" href="mailto:alexander@ashs.pro">alexander@ashs.pro</a>
@@ -871,7 +873,7 @@
     <div><div class="brandrow"><span class="badge" style="width:30px;height:30px;border-radius:8px"><img src="assets/img/ecobos-logo.jpg" alt=""></span><div class="logo" style="font-size:20px"><b>ПРО</b> СТОР</div></div><div style="margin-top:8px">Исполнительный орган Консорциума «Экология Озеленение Благоустройство Строительство»</div></div>
     <div>ИНН 9713017571 · ОГРН 1247700481148
       <div class="docs"><a href="docs/ecobos-presentation.pdf" target="_blank">Презентация (PDF)</a> · <a href="docs/prostor-price.xlsx" download>Прайс-лист (XLSX)</a></div>
-      <div class="docs">Партнёр — дипломатический VIP бизнес-клуб ALEX PRO: <a href="https://club.ashs.pro" target="_blank" rel="noopener">club.ashs.pro</a></div>
+      <div class="docs">Партнёр — дипломатический <span class="nw">VIP бизнес-клуб</span> <span class="nw">ALEX PRO</span>: <a href="https://club.ashs.pro" target="_blank" rel="noopener">club.ashs.pro</a></div>
     </div>
   </div>
 </footer>
